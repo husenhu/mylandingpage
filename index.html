@@ -1,567 +1,2320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sastrakom - Web & Mobile App Developer</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        /* Custom scroll-to-top button style */
-        #scrollToTopBtn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed/sticky position */
-            bottom: 20px; /* Place the button at the bottom of the page */
-            right: 30px; /* Place the button at the right */
-            z-index: 99; /* Make sure it does not overlap */
-            border: none; /* Remove borders */
-            outline: none; /* Remove outline */
-            background-color: #3B82F6; /* Set a background color */
-            color: white; /* Text color */
-            cursor: pointer; /* Add a mouse pointer on hover */
-            padding: 15px; /* Some padding */
-            border-radius: 10px; /* Rounded corners */
-            font-size: 18px; /* Increase font size */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sastrakom Digital Services – Web Hosting, App & Social Media Solutions</title>
+  <meta name="description" content="Sastrakom offers premium web hosting, custom app development, and social media management to boost your online presence and grow your business.">
+  <meta name="keywords" content="web hosting Indonesia, custom app development, social media management, cloud hosting, digital marketing, aplikasi bisnis, jasa pembuatan aplikasi, jasa digital, Sastrakom">
 
-        #scrollToTopBtn:hover {
-            background-color: #2563EB; /* Darker background on hover */
-        }
-    </style>
+  <!-- Favicons -->
+  <link href="assets/logo.png" rel="icon">
+  <link href="assets/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Questrial:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-blue-600"><img src="assets/logo.png" /></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
-                <a href="#products" class="text-gray-600 hover:text-blue-600 transition duration-300">Products</a>
-                <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Services</a>
-                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a>
-                <a href="#testimony" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimony</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename"><img src="assets/logo.png"/></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Porfolio</a></li>
+          <!-- Megamenu 2 -->
+          <li class="megamenu-2"><a href="#"><span>Products & Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+            <!-- Mobile Megamenu -->
+            <ul class="mobile-megamenu">
+
+              <li><a href="#">Product Analytics</a></li>
+              <li><a href="#">Customer Insights</a></li>
+              <li><a href="#">Market Research</a></li>
+
+              <li class="dropdown"><a href="#"><span>Enterprise Software</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">CRM Solutions</a></li>
+                  <li><a href="#">ERP Systems</a></li>
+                  <li><a href="#">Workflow Automation</a></li>
+                  <li><a href="#">Document Management</a></li>
+                  <li><a href="#">Business Intelligence</a></li>
+                  <li><a href="#">Integration Platform</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Development Tools</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Code Editors</a></li>
+                  <li><a href="#">Version Control</a></li>
+                  <li><a href="#">Testing Frameworks</a></li>
+                  <li><a href="#">Deployment Tools</a></li>
+                  <li><a href="#">API Management</a></li>
+                  <li><a href="#">Performance Monitoring</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Creative Suite</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Design Software</a></li>
+                  <li><a href="#">Video Editing</a></li>
+                  <li><a href="#">Audio Production</a></li>
+                  <li><a href="#">Animation Tools</a></li>
+                  <li><a href="#">Photo Editing</a></li>
+                  <li><a href="#">3D Modeling</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Documentation</a></li>
+                  <li><a href="#">Tutorials</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Blog Posts</a></li>
+                </ul>
+              </li>
+
+            </ul><!-- End Mobile Megamenu -->
+
+            <!-- Desktop Megamenu -->
+            <div class="desktop-megamenu">
+
+              <div class="tab-navigation">
+                <ul class="nav nav-tabs flex-column" id="7525-megamenu-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="7525-tab-1-tab" data-bs-toggle="tab" data-bs-target="#7525-tab-1" type="button" role="tab" aria-controls="7525-tab-1" aria-selected="true">
+                      <i class="bi bi-building-gear"></i>
+                      <span>Enterprise Software</span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="7525-tab-2-tab" data-bs-toggle="tab" data-bs-target="#7525-tab-2" type="button" role="tab" aria-controls="7525-tab-2" aria-selected="false">
+                      <i class="bi bi-code-slash"></i>
+                      <span>Development Tools</span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="7525-tab-3-tab" data-bs-toggle="tab" data-bs-target="#7525-tab-3" type="button" role="tab" aria-controls="7525-tab-3" aria-selected="false">
+                      <i class="bi bi-palette"></i>
+                      <span>Creative Suite</span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="7525-tab-4-tab" data-bs-toggle="tab" data-bs-target="#7525-tab-4" type="button" role="tab" aria-controls="7525-tab-4" aria-selected="false">
+                      <i class="bi bi-journal-text"></i>
+                      <span>Resources</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+
+                <!-- Enterprise Software Tab -->
+                <div class="tab-pane fade show active" id="7525-tab-1" role="tabpanel" aria-labelledby="7525-tab-1-tab">
+                  <div class="content-grid">
+                    <div class="product-section">
+                      <h4>Core Solutions</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-people"></i>
+                          <div>
+                            <span>CRM Solutions</span>
+                            <small>Manage customer relationships effectively</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-diagram-3"></i>
+                          <div>
+                            <span>ERP Systems</span>
+                            <small>Integrate all business processes</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-gear-wide"></i>
+                          <div>
+                            <span>Workflow Automation</span>
+                            <small>Streamline repetitive tasks</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="product-section">
+                      <h4>Data &amp; Analytics</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-file-earmark-text"></i>
+                          <div>
+                            <span>Document Management</span>
+                            <small>Organize and secure documents</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-bar-chart"></i>
+                          <div>
+                            <span>Business Intelligence</span>
+                            <small>Make data-driven decisions</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-share"></i>
+                          <div>
+                            <span>Integration Platform</span>
+                            <small>Connect all your systems</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="featured-banner">
+                    <div class="banner-content">
+                      <img src="assets/img/misc/misc-7.webp" alt="Enterprise Solutions" class="banner-image">
+                      <div class="banner-info">
+                        <h5>Enterprise Package</h5>
+                        <p>Comprehensive business management solution with advanced features and 24/7 support.</p>
+                        <a href="#" class="cta-btn">Get Started <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Development Tools Tab -->
+                <div class="tab-pane fade" id="7525-tab-2" role="tabpanel" aria-labelledby="7525-tab-2-tab">
+                  <div class="content-grid">
+                    <div class="product-section">
+                      <h4>Code &amp; Build</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-code-square"></i>
+                          <div>
+                            <span>Code Editors</span>
+                            <small>Advanced development environment</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-git"></i>
+                          <div>
+                            <span>Version Control</span>
+                            <small>Track changes and collaborate</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-check2-square"></i>
+                          <div>
+                            <span>Testing Frameworks</span>
+                            <small>Ensure code quality</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="product-section">
+                      <h4>Deploy &amp; Monitor</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-cloud-upload"></i>
+                          <div>
+                            <span>Deployment Tools</span>
+                            <small>Seamless application deployment</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-api"></i>
+                          <div>
+                            <span>API Management</span>
+                            <small>Design and manage APIs</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-speedometer2"></i>
+                          <div>
+                            <span>Performance Monitoring</span>
+                            <small>Track application performance</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="featured-banner">
+                    <div class="banner-content">
+                      <img src="assets/img/misc/misc-12.webp" alt="Development Tools" class="banner-image">
+                      <div class="banner-info">
+                        <h5>Developer Suite</h5>
+                        <p>Complete toolkit for modern development teams with integrated CI/CD pipelines.</p>
+                        <a href="#" class="cta-btn">Explore Tools <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Creative Suite Tab -->
+                <div class="tab-pane fade" id="7525-tab-3" role="tabpanel" aria-labelledby="7525-tab-3-tab">
+                  <div class="content-grid">
+                    <div class="product-section">
+                      <h4>Design &amp; Visual</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-brush"></i>
+                          <div>
+                            <span>Design Software</span>
+                            <small>Professional graphic design tools</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-camera-video"></i>
+                          <div>
+                            <span>Video Editing</span>
+                            <small>Professional video production</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-image"></i>
+                          <div>
+                            <span>Photo Editing</span>
+                            <small>Advanced image manipulation</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="product-section">
+                      <h4>Media Production</h4>
+                      <div class="product-list">
+                        <a href="#" class="product-link">
+                          <i class="bi bi-music-note"></i>
+                          <div>
+                            <span>Audio Production</span>
+                            <small>Professional audio editing</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-play-circle"></i>
+                          <div>
+                            <span>Animation Tools</span>
+                            <small>Create stunning animations</small>
+                          </div>
+                        </a>
+                        <a href="#" class="product-link">
+                          <i class="bi bi-box"></i>
+                          <div>
+                            <span>3D Modeling</span>
+                            <small>Advanced 3D design software</small>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="featured-banner">
+                    <div class="banner-content">
+                      <img src="assets/img/misc/misc-5.webp" alt="Creative Suite" class="banner-image">
+                      <div class="banner-info">
+                        <h5>Creative Pro</h5>
+                        <p>Everything you need for creative projects, from concept to final production.</p>
+                        <a href="#" class="cta-btn">Start Creating <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Resources Tab -->
+                <div class="tab-pane fade" id="7525-tab-4" role="tabpanel" aria-labelledby="7525-tab-4-tab">
+                  <div class="resources-layout">
+                    <div class="resource-categories">
+                      <div class="resource-category">
+                        <i class="bi bi-book"></i>
+                        <h5>Documentation</h5>
+                        <p>Comprehensive guides and API references for all our products and services.</p>
+                        <a href="#" class="resource-link">Browse Docs <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                      <div class="resource-category">
+                        <i class="bi bi-play-circle"></i>
+                        <h5>Video Tutorials</h5>
+                        <p>Step-by-step video guides to help you get the most out of our solutions.</p>
+                        <a href="#" class="resource-link">Watch Tutorials <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                      <div class="resource-category">
+                        <i class="bi bi-chat-square-dots"></i>
+                        <h5>Community Forum</h5>
+                        <p>Connect with other users, share tips, and get answers to your questions.</p>
+                        <a href="#" class="resource-link">Join Community <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                      <div class="resource-category">
+                        <i class="bi bi-newspaper"></i>
+                        <h5>Blog &amp; Articles</h5>
+                        <p>Latest insights, best practices, and industry trends from our experts.</p>
+                        <a href="#" class="resource-link">Read Blog <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div><!-- End Desktop Megamenu -->
+
+          </li><!-- End Mega Menu 2 -->
+
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1>Sastrakom – Driving Digital Innovation with <span>Top-Tier IT Professionals</span></h1>
+              <p>From web and desktop to mobile app development, our expert talent is ready to elevate your projects. 
+                We cultivate excellence through world-class learning in knowledge, skills, and mindset — delivering not just people, but real impact.</p>
+              <div class="hero-actions justify-content-center justify-content-lg-start">
+                <a href="https://wa.me/6281344022630" class="btn-primary scrollto">Start Journey</a>
+                
+              </div>
             </div>
-            <!-- Mobile menu button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img src="assets/img/illustration/illustration-28.webp" class="img-fluid floating" alt="">
             </div>
+          </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
-            <a href="#home" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-            <a href="#products" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Products</a>
-            <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Services</a>
-            <a href="#testimony" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Testimony</a>
-            <a href="#about" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">About</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32 md:py-48 flex items-center justify-center min-h-screen overflow-hidden">
-        <!-- Video Background -->
-        <!-- PENTING: Ganti URL di bawah ini dengan URL video Anda yang sudah diunggah ke internet. -->
-        <!-- Contoh: Anda bisa mengunggahnya ke layanan hosting file atau CDN, atau menggunakan video dari platform seperti Pexels/Pixabay. -->
-        <!-- Pastikan Anda memiliki versi MP4 dan WebM untuk kompatibilitas browser terbaik. -->
-        <video autoplay loop muted playsinline poster="https://placehold.co/1920x1080/003366/FFFFFF?text=Video+Loading..." class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="assets/hero-section.mp4" type="video/mp4">
-            <!-- Jika Anda juga memiliki versi WebM, tambahkan di sini: -->
-            <!-- <source src="URL_VIDEO_ANDA.webm" type="video/webm"> -->
-            Your browser does not support the video tag.
-        </video>
+      </div>
 
-        <!-- Overlay untuk memastikan teks terbaca di atas video -->
-        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
-
-        <!-- Konten Hero Section -->
-        <div class="container mx-auto px-6 text-center relative z-20">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                Innovating Your Digital Future
-            </h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                Sastrakom is your trusted partner in crafting cutting-edge web and mobile applications that drive growth and deliver exceptional user experiences.
-            </p>
-            <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Get a Free Quote
-            </a>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Product 1 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-hotel"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Hotel Management System</h3>
-                    <p class="text-gray-700 text-center">
-                        A complete solution for managing hotel reservations, check-ins, housekeeping, and billing—all in one dashboard.
-                    </p>
-                </div>
-                <!-- Product 2 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">User Management</h3>
-                    <p class="text-gray-700 text-center">
-                        Manage users, roles, and permissions efficiently using a secure and flexible administration interface.
-                    </p>
-                </div>
-                <!-- Product 3 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">School Management</h3>
-                    <p class="text-gray-700 text-center">
-                        Streamline academic processes including student registration, attendance tracking, and grading in one platform.
-                    </p>
-                </div>
-                <!-- Product 4 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Invoice Generator</h3>
-                    <p class="text-gray-700 text-center">
-                        Easily create and manage professional invoices, automate calculations, and export PDF reports.
-                    </p>
-                </div>
-                <!-- Product 5 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Sales Delivery Tracker</h3>
-                    <p class="text-gray-700 text-center">
-                        Track product deliveries in real time with detailed logs and automated status updates.
-                    </p>
-                </div>
-                <!-- Product 6 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-envelope-open-text"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Email Scraper</h3>
-                    <p class="text-gray-700 text-center">
-                        Collect email addresses from web pages with duplicate filtering and JSON export for easy data management.
-                    </p>
-                </div>
-                <!-- Product 7 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Face Detector</h3>
-                    <p class="text-gray-700 text-center">
-                        An AI-powered face detection tool that identifies and highlights facial features in real-time.
-                    </p>
-                </div>
-                <!-- Product 8 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Math Genius Quiz</h3>
-                    <p class="text-gray-700 text-center">
-                        A fun and educational math quiz game for young learners to sharpen their problem-solving skills.
-                    </p>
-                </div>
-                <!-- Product 9 -->
-                <div class="bg-gray-100 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-5xl mb-6 text-center">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4 text-center">YouTube Downloader</h3>
-                    <p class="text-gray-700 text-center">
-                        Download videos from YouTube in various formats with high speed and simple user interface.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-blue-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Service Card 1: Web Development -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-6xl mb-6">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-3xl font-semibold text-gray-900 mb-4">Web Application Development</h3>
-                    <p class="text-gray-700 mb-6">
-                        From dynamic corporate websites to complex enterprise web applications, we build scalable, secure, and user-friendly solutions tailored to your needs. We specialize in modern frameworks and technologies.
-                    </p>
-                    <ul class="text-gray-600 list-disc list-inside text-left">
-                        <li>Responsive Web Design</li>
-                        <li>E-commerce Solutions</li>
-                        <li>Custom CRM & ERP Systems</li>
-                        <li>API Development & Integration</li>
-                    </ul>
-                </div>
-                <!-- Service Card 2: Mobile Development -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-                    <div class="text-blue-600 text-6xl mb-6">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="text-3xl font-semibold text-gray-900 mb-4">Mobile Application Development</h3>
-                    <p class="text-gray-700 mb-6">
-                        We develop native and cross-platform mobile applications for iOS and Android, ensuring high performance, intuitive interfaces, and seamless user experiences.
-                    </p>
-                    <ul class="text-gray-600 list-disc list-inside text-left">
-                        <li>iOS App Development</li>
-                        <li>Android App Development</li>
-                        <li>Cross-Platform (React Native, Flutter)</li>
-                        <li>UI/UX Design for Mobile</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Python Programming -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center">
-                        <i class="fab fa-python mr-2"></i>Python Programming
-                    </h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Vehicle Detector</li>
-                        <li>Face Detector</li>
-                        <li>MP4 to MP3 Converter</li>
-                        <li>Email Scraper</li>
-                        <li>Math Genius</li>
-                        <li>YTDownloader</li>
-                    </ul>
-                </div>
-                <!-- Web Programming -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center">
-                        <i class="fas fa-code mr-2"></i>Web Programming
-                    </h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Hotel Management System</li>
-                        <li>Bebas Cetak</li>
-                        <li>Fixed Asset</li>
-                        <li>Sales Delivery Tracker</li>
-                        <li>Management Yayasan</li>
-                        <li>Invoice Generator</li>
-                        <li>User Management</li>
-                        <li>Aplikasi RRU</li>
-                    </ul>
-                </div>
-                <!-- Web Design -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center">
-                        <i class="fas fa-paint-brush mr-2"></i>Web Design
-                    </h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Pandu Novia Sakti</li>
-                        <li>Daraulin</li>
-                        <li>Thinkfirst</li>
-                        <li>Senyawa Indonesia</li>
-                        <li>Kukami Indonesia</li>
-                    </ul>
-                </div>
-                <!-- Mobile App -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center">
-                        <i class="fas fa-mobile-alt mr-2"></i>Mobile App
-                    </h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Sales Delivery Tracker</li>
-                        <li>Invoice Generator</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section><!-- /Clients Section -->
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-blue-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">About Sastrakom</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-10">
-                <div class="md:w-1/2">
-                    <img src="assets/about-us.jpg" alt="About Us" class="rounded-xl shadow-lg w-full h-auto">
-                </div>
-                <div class="md:w-1/2 text-center md:text-left">
-                    <p class="text-lg text-gray-700 mb-6">
-                        Sastrakom is a leading software development company specializing in creating high-quality web and mobile applications. With a team of passionate and experienced developers, designers, and strategists, we are committed to delivering innovative and impactful digital solutions.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6">
-                        Our mission is to empower businesses by transforming their ideas into robust and user-centric applications that drive efficiency, engage users, and foster growth in the ever-evolving digital landscape. We pride ourselves on our collaborative approach, transparency, and dedication to client success.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        We believe in building long-term partnerships, providing continuous support, and adapting to the latest technologies to ensure our clients stay ahead in their respective industries.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="about" class="about section">
 
-    <!-- Testimony Section -->
-    <section id="testimony" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Testimony 1 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=AL" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "Honestly, I didn't expect much at first, but they totally surprised me. Super helpful, quick to respond, and the final result works like a charm."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Aline Laurent</p>
-                </div>
-                <!-- Testimony 2 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=RC" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "They really listened to what I needed. Not just delivering the project, but also suggesting things I didn't even think of. Feels like they actually care."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Rafael Cruz</p>
-                </div>
-                <!-- Testimony 3 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=SK" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "I’ve worked with a few tech teams before, but this one felt different—in a good way. Everything was smooth, on time, and the communication was excellent."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Siti Kamariah</p>
-                </div>
-                <!-- Testimony 4 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=TK" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "The process felt easy from the start. I had a lot of questions and they answered them all with patience. Super professional and kind."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Tomoko Kawai</p>
-                </div>
-                <!-- Testimony 5 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=MH" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "We had some specific requirements that weren’t easy, but they handled it so well. The updates were frequent and everything felt transparent."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Mohamed Hassan</p>
-                </div>
-                <!-- Testimony 6 -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
-                    <img src="https://placehold.co/80x80/E0F2FE/1E40AF?text=LC" alt="Client Avatar" class="w-20 h-20 rounded-full mb-4 border-4 border-blue-200">
-                    <p class="text-gray-700 italic mb-4">
-                        "I’m not very tech-savvy, but they made everything easy to understand. I really appreciate how they broke things down without being condescending."
-                    </p>
-                    <p class="font-semibold text-blue-600">– Laura Chen</p>
-                </div>
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Image Column -->
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="assets/img/about/about-portrait-4.webp" alt="About" class="img-fluid">
             </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="col-lg-6">
+            <div class="content">
+              <h2>Empowering Innovation with Expert IT Solutions</h2>
+              <p class="lead">At Sastrakom, we combine technology, talent, and passion to build digital solutions that move businesses forward.</p>
+
+              <p>With deep expertise in web, desktop, and mobile application development, we help clients bring their ideas to life — faster, smarter, and better. Every project we deliver is backed by a team of dedicated professionals committed to excellence and innovation.</p>
+
+              <!-- Stats Row -->
+              <div class="stats-row">
+                <div class="stat-item">
+                  <h3><span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>+</h3>
+                  <p>Projects Delivered</p>
+                </div>
+                <div class="stat-item">
+                  <h3><span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>+</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                  <h3><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>%</h3>
+                  <p>Client Satisfaction Rate</p>
+                </div>
+              </div><!-- End Stats Row -->
+
+              <!-- CTA Button -->
+              <div class="cta-wrapper">
+                <a href="#" class="btn-cta">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Our Services</h2>
+        <p>Providing end-to-end digital solutions to help your business thrive in the digital era.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Web Application Development -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-globe"></i>
+              </div>
+              <h3>Web Application Development</h3>
+              <p>Custom web-based systems tailored to your business processes — scalable, secure, and user-friendly.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Software Development -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>Desktop Software Development</h3>
+              <p>Powerful desktop applications built for performance, stability, and seamless offline access.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile App Development -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3>Mobile App Development</h3>
+              <p>Native & hybrid mobile apps for iOS and Android, designed for performance and great user experience.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Website Design -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-window-stack"></i>
+              </div>
+              <h3>Website Design</h3>
+              <p>Beautiful and responsive website designs that reflect your brand and convert visitors into customers.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hosting Services -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-hdd-network"></i>
+              </div>
+              <h3>Hosting Solutions</h3>
+              <p>Reliable and secure web hosting services to keep your site online, fast, and backed by expert support.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-vector-pen"></i>
+              </div>
+              <h3>UI/UX Design</h3>
+              <p>Designing clean and user-centric interfaces to ensure every interaction is smooth and engaging.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Editing -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-camera-reels"></i>
+              </div>
+              <h3>Video Editing</h3>
+              <p>Professional video editing for promotional, branding, and content creation purposes — fast and polished.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media Management -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <h3>Social Media Management</h3>
+              <p>Boost your brand with consistent posting, audience engagement, content planning, and performance tracking — all managed professionally.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Services Section -->
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+      <div class="container">
+        <div class="features-grid">
+
+          <!-- Feature 1 -->
+          <div class="features-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h3>End-to-End Development Workflow</h3>
+            <p>
+              From planning to deployment, we implement a streamlined process that accelerates delivery while maintaining top-notch quality.
+            </p>
+            <div class="features-list">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Agile-based development</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Continuous integration & testing</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Version control with Git & CI/CD</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="assets/img/illustration/illustration-14.webp" alt="Streamlined Workflow" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="features-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <h3>Smart Performance Monitoring</h3>
+            <p>
+              We track performance from the start, ensuring that your web, mobile, or desktop app runs optimally at all times.
+            </p>
+            <div class="features-list">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Custom dashboard & analytics</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Real-time app monitoring</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Error tracking & performance logs</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="assets/img/illustration/illustration-6.webp" alt="Performance Analytics" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="features-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h3>Robust Security Protocols</h3>
+            <p>
+              Security is our priority. We implement industry-standard practices to ensure your data and systems are always protected.
+            </p>
+            <div class="features-list">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>SSL, HTTPS & data encryption</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Secure login & user roles</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Routine vulnerability checks</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="assets/img/illustration/illustration-7.webp" alt="Security Framework" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="features-card">
+            <div class="icon-wrapper">
+              <i class="bi bi-people"></i>
+            </div>
+            <h3>Seamless Team Collaboration</h3>
+            <p>
+              We believe great software is built through collaboration. Our workflow supports full transparency and easy communication.
+            </p>
+            <div class="features-list">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Client-involved project boards</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Progress updates in real-time</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span>Cross-functional teamwork</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="assets/img/illustration/illustration-8.webp" alt="Team Environment" class="img-fluid">
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+    <!-- /Features Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Portfolio</h2>
+        <p>Explore our diverse portfolio of real-world projects, showcasing our expertise in web, mobile, design, and desktop software.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+
+          <div class="portfolio-filters-wrapper">
+            <ul class="portfolio-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All Projects</li>
+              <li data-filter=".filter-python">Python</li>
+              <li data-filter=".filter-web">Web App</li>
+              <li data-filter=".filter-design">Web Design</li>
+              <li data-filter=".filter-mobile">Mobile</li>
+            </ul>
+          </div>
+
+          <div class="row gy-4 portfolio-grid isotope-container">
+
+            <!-- Example Portfolio Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <div class="content">
+                  <h3>Vehicle Detector</h3>
+                  <p>Python-based vehicle detection using OpenCV</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat for each item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-person-bounding-box"></i>
+                </div>
+                <div class="content">
+                  <h3>Face Detector</h3>
+                  <p>Facial recognition and detection software</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-music-note"></i>
+                </div>
+                <div class="content">
+                  <h3>MP4 to MP3 Converter</h3>
+                  <p>Simple media converter application using Python</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-envelope-open"></i>
+                </div>
+                <div class="content">
+                  <h3>Email Scraper</h3>
+                  <p>Email harvesting and filter tool with GUI</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-calculator"></i>
+                </div>
+                <div class="content">
+                  <h3>Math Genius</h3>
+                  <p>Educational math game for kids</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-cloud-arrow-down"></i>
+                </div>
+                <div class="content">
+                  <h3>YTDownloader</h3>
+                  <p>YouTube video and audio downloader in Python</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web Projects -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div class="content">
+                  <h3>Hotel Management System</h3>
+                  <p>Comprehensive web-based hotel operations system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-printer"></i>
+                </div>
+                <div class="content">
+                  <h3>Bebas Cetak</h3>
+                  <p>Print order management system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-box"></i>
+                </div>
+                <div class="content">
+                  <h3>Fixed Asset</h3>
+                  <p>Asset tracking and reporting system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-truck"></i>
+                </div>
+                <div class="content">
+                  <h3>Sales Delivery Tracker</h3>
+                  <p>Real-time tracking platform for sales and delivery</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <div class="content">
+                  <h3>Management Yayasan</h3>
+                  <p>Foundation administrative and finance system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-receipt"></i>
+                </div>
+                <div class="content">
+                  <h3>Invoice Generator</h3>
+                  <p>Web-based invoice management tool</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="content">
+                  <h3>User Management</h3>
+                  <p>Role and permission-based user control system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-journal-code"></i>
+                </div>
+                <div class="content">
+                  <h3>Aplikasi RRU</h3>
+                  <p>Internal reporting system for organizational use</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-journal-code"></i>
+                </div>
+                <div class="content">
+                  <h3>School Management</h3>
+                  <p>We build an application for some schools in Jakarta Utara</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web Design -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-palette"></i>
+                </div>
+                <div class="content">
+                  <h3>Pandu Novia Sakti</h3>
+                  <p>Elegant website design for personal branding</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-box-seam"></i>
+                </div>
+                <div class="content">
+                  <h3>Daraulin</h3>
+                  <p>Product showcase and landing page design</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-layout-text-window"></i>
+                </div>
+                <div class="content">
+                  <h3>Thinkfirst</h3>
+                  <p>Corporate website design with minimalist UI</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div class="content">
+                  <h3>Senyawa Indonesia</h3>
+                  <p>Company profile design with cultural themes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-bag"></i>
+                </div>
+                <div class="content">
+                  <h3>Kukami Indonesia</h3>
+                  <p>Modern eCommerce-style web design</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <div class="content">
+                  <h3>Sales Delivery Tracker</h3>
+                  <p>Android app for tracking deliveries and sales</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mobile">
+              <div class="portfolio-card">
+                <div class="service-icon">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <div class="content">
+                  <h3>Invoice Generator</h3>
+                  <p>Mobile invoicing tool for business on-the-go</p>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- End Portfolio Grid -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- How We Work Section -->
+    <section id="how-we-work" class="how-we-work section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>How We Work</h2>
+        <p>Our proven process ensures every project runs smoothly from idea to execution, with clarity, speed, and quality at every stage.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="steps-wrapper">
+
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="step-item">
+                <div class="step-circle">
+                  <span>1</span>
+                </div>
+                <h3>Discovery</h3>
+                <p>We begin by understanding your vision, business needs, and target users through focused discussions and requirement analysis.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="step-item">
+                <div class="step-circle">
+                  <span>2</span>
+                </div>
+                <h3>Planning</h3>
+                <p>We craft a tailored project roadmap—outlining timelines, technologies, and milestones—to ensure a clear and structured journey.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="step-item">
+                <div class="step-circle">
+                  <span>3</span>
+                </div>
+                <h3>Execution</h3>
+                <p>Our expert team brings the plan to life through agile development, constant feedback loops, and transparent collaboration.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="step-item">
+                <div class="step-circle">
+                  <span>4</span>
+                </div>
+                <h3>Delivery</h3>
+                <p>We launch with confidence, provide training if needed, and offer post-deployment support to guarantee long-term success.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /How We Work Section -->
+
+
+    <!-- Tabs Section -->
+    <section id="tabs" class="tabs section">
+      <div class="container">
+        <div class="tabs-wrapper">
+          <div class="tabs-header">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tabs-tab-1">
+                  <div class="tab-content-preview">
+                    <span class="tab-number">01</span>
+                    <div class="tab-text">
+                      <h6>Innovation</h6>
+                      <small>Creative solutions</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-2">
+                  <div class="tab-content-preview">
+                    <span class="tab-number">02</span>
+                    <div class="tab-text">
+                      <h6>Strategy</h6>
+                      <small>Business growth</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-3">
+                  <div class="tab-content-preview">
+                    <span class="tab-number">03</span>
+                    <div class="tab-text">
+                      <h6>Performance</h6>
+                      <small>Optimal results</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabs-tab-4">
+                  <div class="tab-content-preview">
+                    <span class="tab-number">04</span>
+                    <div class="tab-text">
+                      <h6>Integration</h6>
+                      <small>Seamless workflow</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+
+            <div class="tab-pane fade active show" id="tabs-tab-1">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="content-area">
+                    <div class="content-badge">
+                      <i class="bi bi-lightbulb"></i>
+                      <span>Innovation Hub</span>
+                    </div>
+                    <h3>Revolutionary Design Thinking</h3>
+                    <p>We don’t just design — we craft bold, creative solutions that align with your business vision. Every concept is born from strategic thinking to deliver digital experiences that captivate and drive real results.</p>
+
+                    <div class="highlight-stats">
+                      <div class="stat-item">
+                        <span class="stat-value">145%</span>
+                        <span class="stat-label">Innovation Rate</span>
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-value">28K</span>
+                        <span class="stat-label">Ideas Generated</span>
+                      </div>
+                    </div>
+
+                    <div class="feature-points">
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Tailored creative solutions designed to elevate your brand</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Collaborative approach ensuring every detail hits the mark</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Cutting-edge design backed by data and innovation</span>
+                      </div>
+                    </div>
+                    <a href="#" class="explore-link">
+                      Discover Innovation <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="visual-content">
+                    <img src="assets/img/features/features-2.webp" alt="" class="img-fluid">
+                    <div class="floating-element">
+                      <div class="floating-card">
+                        <i class="bi bi-lightning-charge"></i>
+                        <div class="card-info">
+                          <span>Speed</span>
+                          <strong>3x Faster</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tabs-tab-2">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="content-area">
+                    <div class="content-badge">
+                      <i class="bi bi-compass"></i>
+                      <span>Strategic Planning</span>
+                    </div>
+                    <h3>Data-Driven Business Strategy</h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+
+                    <div class="highlight-stats">
+                      <div class="stat-item">
+                        <span class="stat-value">234%</span>
+                        <span class="stat-label">Growth Rate</span>
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-value">156</span>
+                        <span class="stat-label">Strategies</span>
+                      </div>
+                    </div>
+
+                    <div class="feature-points">
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Similique sunt in culpa qui officia deserunt</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Mollitia animi id est laborum et dolorum fuga</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Et harum quidem rerum facilis est expedita</span>
+                      </div>
+                    </div>
+
+                    <a href="#" class="explore-link">
+                      View Strategy <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="visual-content">
+                    <img src="assets/img/features/features-4.webp" alt="" class="img-fluid">
+                    <div class="floating-element">
+                      <div class="floating-card">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <div class="card-info">
+                          <span>Growth</span>
+                          <strong>+189% ROI</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tabs-tab-3">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="content-area">
+                    <div class="content-badge">
+                      <i class="bi bi-speedometer2"></i>
+                      <span>High Performance</span>
+                    </div>
+                    <h3>Optimized System Performance</h3>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet voluptates repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur sapiente delectus.</p>
+
+                    <div class="highlight-stats">
+                      <div class="stat-item">
+                        <span class="stat-value">99.8%</span>
+                        <span class="stat-label">System Uptime</span>
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-value">2.4s</span>
+                        <span class="stat-label">Load Time</span>
+                      </div>
+                    </div>
+
+                    <div class="feature-points">
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Ut aut reiciendis voluptatibus maiores alias</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Consequatur aut perferendis doloribus asperiores</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Repellat nam libero tempore cum soluta nobis</span>
+                      </div>
+                    </div>
+
+                    <a href="#" class="explore-link">
+                      Check Performance <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="visual-content">
+                    <img src="assets/img/features/features-1.webp" alt="" class="img-fluid">
+                    <div class="floating-element">
+                      <div class="floating-card">
+                        <i class="bi bi-cpu"></i>
+                        <div class="card-info">
+                          <span>Power</span>
+                          <strong>128 Cores</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tabs-tab-4">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="content-area">
+                    <div class="content-badge">
+                      <i class="bi bi-puzzle"></i>
+                      <span>Smart Integration</span>
+                    </div>
+                    <h3>Seamless Workflow Integration</h3>
+                    <p>Eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut officiis debitis.</p>
+
+                    <div class="highlight-stats">
+                      <div class="stat-item">
+                        <span class="stat-value">450+</span>
+                        <span class="stat-label">Integrations</span>
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-value">85%</span>
+                        <span class="stat-label">Automation</span>
+                      </div>
+                    </div>
+
+                    <div class="feature-points">
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Rerum necessitatibus saepe eveniet voluptates</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Repudiandae sint et molestiae non recusandae</span>
+                      </div>
+                      <div class="point-item">
+                        <i class="bi bi-arrow-right"></i>
+                        <span>Itaque earum rerum hic tenetur sapiente</span>
+                      </div>
+                    </div>
+
+                    <a href="#" class="explore-link">
+                      Start Integration <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="visual-content">
+                    <img src="assets/img/features/features-5.webp" alt="" class="img-fluid">
+                    <div class="floating-element">
+                      <div class="floating-card">
+                        <i class="bi bi-link-45deg"></i>
+                        <div class="card-info">
+                          <span>Connected</span>
+                          <strong>24/7 Sync</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Tabs Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Testimonials</h2>
+        <p>What our clients say about working with us — real stories, real impact.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="testimonial-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Working with this team was a breath of fresh air. They truly listened to our needs and turned our ideas into a stunning product. Highly recommended!</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Jessica Martinez</h5>
+                  <span>from Fiverr</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-m-8.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>They delivered not just what we asked for, but what we actually needed. Super reliable and technically solid — I’ll definitely collaborate again.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>David Rodriguez</h5>
+                  <span>from Fiverr</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-f-6.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Creative, detail-oriented, and always ahead of schedule. Their design instincts are top-notch — our brand has never looked better.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Amanda Wilson</h5>
+                  <span>from Fastwork</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-m-12.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>I was impressed with how smooth the process went. From strategy to execution, everything felt organized and goal-focused.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Ryan Thompson</h5>
+                  <span>from Fastwork</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>They understood our vision from day one and brought it to life better than we imagined. Communication was excellent throughout the project.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Rachel Chen</h5>
+                  <span>from Fiverr</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+          </div>
+
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- App Development Pricing Section -->
+    <section id="app-development" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>App Development Packages</h2>
+        <p>Build your custom mobile or web application — fast, scalable, and tailored to your business goals.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center g-4">
+
+          <!-- Basic App Plan -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card starter">
+              <div class="plan-header">
+                <h3 class="plan-name">Basic App</h3>
+                <p class="plan-description">Ideal for MVPs and small-scale app projects.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">300</span>
+                  <span class="period">/project</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>Simple Web or Mobile App</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Up to 5 Screens</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Basic UI/UX</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Free Consultation</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>7–10 Days Delivery</span></div>
+              </div>
+              <a href="https://wa.me/6281344022630" target="_blank" class="btn-plan">Chat on WhatsApp</a>
+            </div>
+          </div><!-- End Basic App Plan -->
+
+          <!-- Standard App Plan -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card professional featured">
+              <div class="plan-header">
+                <div class="featured-badge">Most Popular</div>
+                <h3 class="plan-name">Standard App</h3>
+                <p class="plan-description">For growing startups or businesses that need more features.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">500</span>
+                  <span class="period">/project</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>iOS / Android / Web App</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Custom UI/UX Design</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>API Integration</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Admin Dashboard</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>2–3 Weeks Delivery</span></div>
+              </div>
+              <a href="https://wa.me/6281344022630" target="_blank" class="btn-plan">Start Your App – Chat Now</a>
+            </div>
+          </div><!-- End Standard App Plan -->
+
+          <!-- Enterprise App Plan -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card enterprise">
+              <div class="plan-header">
+                <h3 class="plan-name">Enterprise App</h3>
+                <p class="plan-description">Advanced solution for large systems or business-critical apps.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">Custom</span>
+                  <span class="amount">Quote</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>Full-Scale App (Backend + Frontend)</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Payment Gateway, Auth, Notification</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Cloud Deployment</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Project Manager + Dev Team</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Custom Timeline</span></div>
+              </div>
+              <a href="https://wa.me/6281344022630" target="_blank" class="btn-plan">Request Free Quote</a>
+            </div>
+          </div><!-- End Enterprise App Plan -->
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8 text-center">
+            <div class="pricing-footer">
+              <p class="guarantee-text">Free initial consultation • Transparent pricing • Flexible timeline</p>
+              <p class="contact-text">Got questions? <a href="https://wa.me/6281344022630" target="_blank">Message us on WhatsApp</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /App Development Pricing Section -->
+
+    <!-- Webhosting Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Our Hosting Plans</h2>
+        <p>Choose the perfect plan for your website—fast, secure, and optimized for growth.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center g-4">
+
+          <!-- Premium Web Hosting -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card starter">
+              <div class="plan-header">
+                <h3 class="plan-name">Premium Web Hosting</h3>
+                <p class="plan-description">Complete features to build and manage your website.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">Rp</span>
+                  <span class="amount">39.900</span>
+                  <span class="period">/bln</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>25 Websites</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>25,000 Monthly Visits</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>25 GB SSD Storage</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>400,000 Inodes</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Free SSL & Email</span></div>
+              </div>
+              <a href="https://www.niagahoster.co.id/cart?product=hosting%3Ahostinger_premium&period=12&referral_type=cart_link&REFERRALCODE=XROCHEFFZ4TU&referral_id=01983f81-27db-7180-8f47-ea9a8f51351f" class="btn-plan">Get Started – Rp383.040</a>
+            </div>
+          </div><!-- End Premium Plan -->
+
+          <!-- Business Web Hosting -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card professional featured">
+              <div class="plan-header">
+                <div class="featured-badge">Most Popular</div>
+                <h3 class="plan-name">Business Web Hosting</h3>
+                <p class="plan-description">More power and advanced resources for growing websites.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">Rp</span>
+                  <span class="amount">59.900</span>
+                  <span class="period">/bln</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>50 Websites</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>100,000 Monthly Visits</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>50 GB NVMe Storage</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>600,000 Inodes</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Daily Backups + Enhanced Performance</span></div>
+              </div>
+              <a href="https://www.niagahoster.co.id/cart?product=hosting%3Ahostinger_business&period=12&referral_type=cart_link&REFERRALCODE=XROCHEFFZ4TU&referral_id=01983f81-a374-729f-bba2-5ab94d186f2d" class="btn-plan">Get Started – Rp575.040</a>
+            </div>
+          </div><!-- End Business Plan -->
+
+          <!-- Cloud Startup -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card enterprise">
+              <div class="plan-header">
+                <h3 class="plan-name">Cloud Startup</h3>
+                <p class="plan-description">Optimized for business websites and online stores.</p>
+              </div>
+              <div class="pricing-display">
+                <div class="price">
+                  <span class="currency">Rp</span>
+                  <span class="amount">155.900</span>
+                  <span class="period">/bln</span>
+                </div>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> <span>100 Websites</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>200,000 Monthly Visits</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>100 GB NVMe Storage</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>2,000,000 Inodes</span></div>
+                <div class="feature"><i class="bi bi-check2"></i> <span>Priority Support & Cloud Resources</span></div>
+              </div>
+              <a href="https://www.niagahoster.co.id/cart?product=hosting%3Acloud_economy&period=12&referral_type=cart_link&REFERRALCODE=XROCHEFFZ4TU&referral_id=01983f81-df47-706e-bea2-4e4c9fc5f739" class="btn-plan">Get Started – Rp1.496.640</a>
+            </div>
+          </div><!-- End Cloud Startup Plan -->
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8 text-center">
+            <div class="pricing-footer">
+              <p class="guarantee-text">20% discount applied • Fast activation • Cancel anytime</p>
+              <p class="contact-text">Need help choosing a plan? <a href="#">Contact our sales team</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Webhosting Pricing Section -->
+
+    <!-- Social Media Pricing Section -->
+    <section id="social-pricing" class="pricing section">
+
+      <div class="container section-title">
+        <h2>Social Media Management Packages</h2>
+        <p>Boost your online presence with our tailored content and community engagement solutions.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row justify-content-center g-4">
+
+          <!-- Basic Package -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card starter">
+              <div class="plan-header">
+                <h3 class="plan-name">$50 Basic</h3>
+                <p class="plan-description">Daily 1 post • 7 days • Free basic management • 24/7 Support</p>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> Page/channel evaluation</div>
+                <div class="feature"><i class="bi bi-check2"></i> Schedule posts</div>
+                <div class="feature"><i class="bi bi-check2"></i> Reporting</div>
+                <div class="feature"><i class="bi bi-check2"></i> Engagement with followers</div>
+                <div class="feature"><i class="bi bi-check2"></i> 1 Platform</div>
+                <div class="feature"><i class="bi bi-check2"></i> 7 Days Management</div>
+                <div class="feature"><i class="bi bi-check2"></i> Unlimited Revisions</div>
+              </div>
+              <div class="pricing-display mt-3">
+                <p class="text-muted mb-1">Delivery Time:</p>
+                <p><strong>7 Days</strong> (or 1 Day +$20)</p>
+              </div>
+              <a href="https://wa.me/6281344022630" class="btn-plan">Choose Basic</a>
+            </div>
+          </div>
+
+          <!-- Standard Package -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card professional featured">
+              <div class="plan-header">
+                <div class="featured-badge">Best Seller</div>
+                <h3 class="plan-name">$100 Standard</h3>
+                <p class="plan-description">Daily 2 posts • 7 days • Premium mgmt • 4 Reels • 24/7 Support</p>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> Page/channel evaluation</div>
+                <div class="feature"><i class="bi bi-check2"></i> Content creation</div>
+                <div class="feature"><i class="bi bi-check2"></i> Schedule posts</div>
+                <div class="feature"><i class="bi bi-check2"></i> Reporting</div>
+                <div class="feature"><i class="bi bi-check2"></i> Engagement with followers</div>
+                <div class="feature"><i class="bi bi-check2"></i> 2 Platforms</div>
+                <div class="feature"><i class="bi bi-check2"></i> 14 Days Management</div>
+                <div class="feature"><i class="bi bi-check2"></i> Unlimited Revisions</div>
+              </div>
+              <div class="pricing-display mt-3">
+                <p class="text-muted mb-1">Delivery Time:</p>
+                <p><strong>7 Days</strong> (or 3 Days +$50)</p>
+              </div>
+              <a href="https://wa.me/6281344022630" class="btn-plan">Choose Standard</a>
+            </div>
+          </div>
+
+          <!-- Premium Package -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pricing-card enterprise">
+              <div class="plan-header">
+                <h3 class="plan-name">$200 Premium</h3>
+                <p class="plan-description">Daily 1 post • 30 days • 8 Reels • Premium mgmt • 24/7 Support</p>
+              </div>
+              <div class="features-list">
+                <div class="feature"><i class="bi bi-check2"></i> Page/channel evaluation</div>
+                <div class="feature"><i class="bi bi-check2"></i> Content creation</div>
+                <div class="feature"><i class="bi bi-check2"></i> Schedule posts</div>
+                <div class="feature"><i class="bi bi-check2"></i> Reporting</div>
+                <div class="feature"><i class="bi bi-check2"></i> Engagement with followers</div>
+                <div class="feature"><i class="bi bi-check2"></i> 2 Platforms</div>
+                <div class="feature"><i class="bi bi-check2"></i> 30 Days Management</div>
+                <div class="feature"><i class="bi bi-check2"></i> Unlimited Revisions</div>
+              </div>
+              <div class="pricing-display mt-3">
+                <p class="text-muted mb-1">Delivery Time:</p>
+                <p><strong>30 Days</strong> (or 7 Days +$100)</p>
+              </div>
+              <a href="https://wa.me/6281344022630" class="btn-plan">Choose Premium</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8 text-center">
+            <div class="pricing-footer">
+              <p class="guarantee-text">Reels included • Unlimited revisions • 24/7 Client Support</p>
+              <p class="contact-text">Still unsure? <a href="#">Let’s talk about your goals</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Social Media Pricing Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Got questions? We’ve got answers. Here are some of the most common things our clients ask.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+
+            <div class="faq-wrapper">
+
+              <div class="faq-item faq-active">
+                <div class="faq-header">
+                  <span class="faq-number">01</span>
+                  <h4>How long does it take to get started?</h4>
+                  <div class="faq-toggle">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash"></i>
+                  </div>
+                </div>
+                <div class="faq-content">
+                  <div class="content-inner">
+                    <p>Once we understand your needs, we can usually get started within 2–3 business days. We'll walk you through every step to ensure a smooth onboarding process.</p>
+                  </div>
+                </div>
+              </div><!-- End FAQ Item -->
+
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span class="faq-number">02</span>
+                  <h4>What industries do you work with?</h4>
+                  <div class="faq-toggle">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash"></i>
+                  </div>
+                </div>
+                <div class="faq-content">
+                  <div class="content-inner">
+                    <p>We work with startups, enterprises, and creative agencies across various industries including tech, retail, education, healthcare, and finance.</p>
+                  </div>
+                </div>
+              </div><!-- End FAQ Item -->
+
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span class="faq-number">03</span>
+                  <h4>Do you offer custom solutions?</h4>
+                  <div class="faq-toggle">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash"></i>
+                  </div>
+                </div>
+                <div class="faq-content">
+                  <div class="content-inner">
+                    <p>Absolutely. All of our solutions are tailored to your business goals. Whether you need a redesign, full development, or integrations — we’ve got you covered.</p>
+                  </div>
+                </div>
+              </div><!-- End FAQ Item -->
+
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span class="faq-number">04</span>
+                  <h4>How do you ensure quality and consistency?</h4>
+                  <div class="faq-toggle">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash"></i>
+                  </div>
+                </div>
+                <div class="faq-content">
+                  <div class="content-inner">
+                    <p>We follow proven processes and best practices in design, development, and testing. Regular check-ins and feedback loops ensure everything stays on track.</p>
+                  </div>
+                </div>
+              </div><!-- End FAQ Item -->
+
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span class="faq-number">05</span>
+                  <h4>What if I need support after launch?</h4>
+                  <div class="faq-toggle">
+                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash"></i>
+                  </div>
+                </div>
+                <div class="faq-content">
+                  <div class="content-inner">
+                    <p>No worries — we offer ongoing maintenance and support plans to keep your system running smoothly, with options for updates, monitoring, and more.</p>
+                  </div>
+                </div>
+              </div><!-- End FAQ Item -->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <!-- Contact Form -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h3>
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="your.email@example.com">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your message..."></textarea>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+        <p>Let’s turn your ideas into reality — reach out and let’s build something great together.</p>
+      </div><!-- End Section Title -->
 
-                <!-- Contact Info & Map -->
-                <div class="bg-blue-50 rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Our Location & Details</h3>
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-4"></i>
-                            <p class="text-gray-700 text-lg">
-                                Seroja Home Residence 2 Blok B 71, Bandung, Jawa Barat, Indonesia
-                            </p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fab fa-whatsapp text-blue-600 text-2xl mr-4"></i>
-                            <a href="https://wa.me/6281234567890" target="_blank" class="text-gray-700 text-lg hover:text-blue-600 transition duration-300">
-                                +62 813-4402-2630
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-blue-600 text-2xl mr-4"></i>
-                            <a href="mailto:info@sastrakom.com" class="text-gray-700 text-lg hover:text-blue-600 transition duration-300">
-                                sastrakom.mkw@gmail.com
-                            </a>
-                        </div>
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-7 order-lg-1 order-2">
+            <div class="contact-form-container">
+              <div class="form-intro">
+                <h2>Let's Start a Conversation</h2>
+                <p>Have a project in mind or just curious about what we can do? Reach out — we’d love to hear from you and explore the possibilities together.</p>
+              </div>
+
+              <form action="#" method="post" class="php-email-form contact-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
+                      <label for="userName" class="field-label">Name</label>
                     </div>
-                    <!-- Google Map Embed - Placeholder -->
-                    <div class="rounded-xl overflow-hidden shadow-md h-64 lg:h-80 w-full">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3959.8844350216286!2d107.54155628297723!3d-7.022868178907206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scingcin%20permata%20indah%20blok%20g%20200!5e0!3m2!1sid!2sid!4v1753332617779!5m2!1sid!2sid"
-                            width="100%"
-                            height="100%"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
+                      <label for="userEmail" class="field-label">Email</label>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <!-- Logo & Address -->
-            <div class="text-center md:text-left">
-                <h3 class="text-3xl font-bold text-blue-400 mb-4">Sastrakom</h3>
-                <p class="text-gray-400 mb-2">Seroja Home Residence 2 Blok B 71, Bandung, Jawa Barat</p>
-                <p class="text-gray-400 mb-2">40311, Indonesia</p>
-                <p class="text-gray-400">&copy; 2025 Sastrakom. All rights reserved.</p>
-            </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
+                      <label for="userPhone" class="field-label">Phone</label>
+                    </div>
+                  </div>
 
-            <!-- Navigation Links -->
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition duration-300">Home</a></li>
-                    <li><a href="#products" class="text-gray-400 hover:text-blue-400 transition duration-300">Products</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition duration-300">Services</a></li>
-                    <li><a href="#testimony" class="text-gray-400 hover:text-blue-400 transition duration-300">Testimony</a></li>
-                    <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition duration-300">About</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition duration-300">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Products Column -->
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-semibold mb-4">Products</h4>
-                <ul class="space-y-2">
-                    <li><a href="https://www.codester.com/items/30777/asset-management-application" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">Asset Management System</a></li>
-                    <li><a href="https://github.com/husenhu/user-management/tree/Published" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">Free User Management</a></li>
-                    <li><a href="https://github.com/husenhu/YT-Downloader-3.0" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">YT Downloader 3.0</a></li>
-                    <li><a href="https://github.com/husenhu/Math-Genius-V1.0" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">Math Genius V1.0</a></li>
-                    <li><a href="https://github.com/husenhu/Face-Detector-1.0" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">Face Detector V1.0</a></li>
-                </ul>
-            </div>
-
-            <!-- Social Media -->
-            <div class="text-center md:text-right">
-                <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
-                <div class="flex justify-center md:justify-end space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
+                      <label for="messageSubject" class="field-label">Subject</label>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="form-field message-field">
+                  <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
+                  <label for="userMessage" class="field-label">Message</label>
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+
+                <button type="submit" class="send-button">
+                  Send Message
+                  <span class="button-arrow">→</span>
+                </button>
+              </form>
             </div>
+          </div>
+
+          <div class="col-lg-5 order-lg-2 order-1">
+            <div class="contact-sidebar">
+              <div class="contact-header">
+                <h3>Get in Touch</h3>
+                <p>Ready to bring your ideas to life? Send us a message and let’s create something amazing together.</p>
+              </div>
+
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Address</span>
+                    <p>Seroja Home Resdence 2 Blok B 71<br>Bandung, Jawa Barat</p>
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Email</span>
+                    <p>info@sastrakom.web.id</p>
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Phone</span>
+                    <p>+62 81344 022 630</p>
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="bi bi-clock"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span class="method-label">Hours</span>
+                    <p>Monday - Friday: 9AM - 9PM<br>Saturday: 9AM - 5PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="connect-section">
+                <span class="connect-label">Connect with us</span>
+                <div class="social-links">
+                  <a href="#" class="social-link">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="https://x.com/sastrakomid" class="social-link">
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                  <a href="https://www.instagram.com/sastrakomofficial/" class="social-link">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com/sastrakomindonesia" class="social-link">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section><!-- /Contact Section -->
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+  </main>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+  <footer id="footer" class="footer position-relative light-background">
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+    <div class="container">
+      <div class="row gy-5">
 
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
+        <div class="col-lg-4">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">Sastrakom</span>
+            </a>
+            <p class="mb-4">We turn bold ideas into digital reality. At Sastrakom, we blend creativity, strategy, and technology to deliver solutions that elevate your brand and accelerate growth.</p>
+            <div class="newsletter-form">
+              <h5>Stay Updated</h5>
+              <form action="#" method="post" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Thank you for subscribing!</div>
+              </form>
+            </div>
+          </div>
+        </div>
 
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about"><i class="bi bi-chevron-right"></i> About</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Careers</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Press</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Blog</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="https://wa.me/6281344022630"><i class="bi bi-chevron-right"></i> Digital Strategy</a></li>
+              <li><a href="https://wa.me/6281344022630"><i class="bi bi-chevron-right"></i> Cloud Computing</a></li>
+              <li><a href="https://wa.me/6281344022630"><i class="bi bi-chevron-right"></i> Data Analytics</a></li>
+              <li><a href="https://wa.me/6281344022630"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
+              <li><a href="https://wa.me/6281344022630"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
 
-        // Scroll to top button functionality
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        <div class="col-lg-4">
+          <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p>Seroja Home Residence 2 Blok B 71<br>Bandung, Jawa Barat<br>Indonesia</p>
+              </div>
+            </div>
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>+62 81344 022 630</p>
+              </div>
+            </div>
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>info@sastrakom.web.id</p>
+              </div>
+            </div>
 
-        // When the user clicks on the button, scroll to the top of the document
-        scrollToTopBtn.addEventListener('click', function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        });
-    </script>
+            <div class="social-links">
+              <a href="https://facebook.com/sastrakomindonesia"><i class="bi bi-facebook"></i></a>
+              <a href="https://x.com/sastrakomid"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="https://github.com/husenhu"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">Sastrakom</strong> <span>All Rights Reserved</span></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <div class="credits">
+              Designed by <a href="https://sastrakom.web.id/">Sastrakom</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
