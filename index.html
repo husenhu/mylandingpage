@@ -25,6 +25,26 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+      background-color: #25D366;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+    }
+    .wa-float img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -2299,6 +2319,9 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/6281344022630" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="WhatsApp Icon">
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
